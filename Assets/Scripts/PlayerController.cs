@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,13 +24,20 @@ public class PlayerController : MonoBehaviour
     private bool jump = false;
     public Transform cameraTransform;
     public Camera CameraSettings;
-    
+
+    public GameObject spawnPrefab;
+    public Quaternion prefabRotation = new Quaternion(0f, 0f, 0f, 0f);
+    public Vector3 prefabPosition = new Vector3(-6, 5, 0);
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+
+        
+        Instantiate(spawnPrefab, prefabPosition, prefabRotation);
         
 
     }
@@ -50,16 +58,21 @@ public class PlayerController : MonoBehaviour
 
 
         //Show mouse again
-        if (Input.GetKey(KeyCode.Escape)){
+        if (Input.GetKey(KeyCode.Escape))
+        {
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
 
-
-
-        
         }
+        //fall reset
+        if (transform.position.y < -18)
+        {
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        
         
      
 
