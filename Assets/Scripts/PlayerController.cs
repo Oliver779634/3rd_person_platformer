@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private float dashing = .2f;
     public float currentSpeed;
 
+    public bool isFast = false;
+
 
 
     private CharacterController controller;
@@ -84,7 +86,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) | (Input.GetMouseButtonDown(1)))
         {
 
-
+            isFast = true;
 
             if (controller.isGrounded == false && dashing > 0 ) {
 
@@ -106,6 +108,13 @@ public class PlayerController : MonoBehaviour
             
             
         }
+
+        else
+        {
+            isFast= false;
+        }
+
+
 
         if (dashing < 0)
         {
