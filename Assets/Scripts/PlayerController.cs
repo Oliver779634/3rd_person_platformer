@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,6 +29,18 @@ public class PlayerController : MonoBehaviour
     public GameObject spawnPrefab;
     public Quaternion prefabRotation = new Quaternion(0f, 0f, 0f, 0f);
     public Vector3 prefabPosition = new Vector3(-6, 5, 0);
+    public bool doPrefabSpawn = false;
+
+
+
+
+
+
+    //Tutorial Texts
+
+    public TextMeshProUGUI JumpText;
+    public TextMeshProUGUI SprintText;
+
 
     void Start()
     {
@@ -36,8 +49,11 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
 
 
+        if (doPrefabSpawn)
+        {
+            Instantiate(spawnPrefab, prefabPosition, prefabRotation);
+        }
         
-        Instantiate(spawnPrefab, prefabPosition, prefabRotation);
         
 
     }
@@ -100,7 +116,8 @@ public class PlayerController : MonoBehaviour
         {
 
             isFast = true;
-
+            SprintText.fontSize = 0;
+          
             if (controller.isGrounded == false && dashing > 0 ) {
 
                 currentSpeed = dashSpeed;
@@ -159,7 +176,7 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = -2f;
             jump = false;
-
+            
 
         }
 
@@ -191,7 +208,7 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             jump = true;
-
+            JumpText.fontSize = 0;
 
         }
 
