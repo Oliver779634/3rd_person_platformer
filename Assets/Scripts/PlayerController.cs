@@ -36,14 +36,16 @@ public class PlayerController : MonoBehaviour
 
 
 
-    //Tutorial Texts
+    //Texts
 
     public TextMeshProUGUI JumpText;
     public TextMeshProUGUI SprintText;
-
+    public TextMeshProUGUI WinText;
 
     void Start()
     {
+
+        WinText.fontSize = 0;
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
