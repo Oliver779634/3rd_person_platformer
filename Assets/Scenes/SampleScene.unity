@@ -2647,15 +2647,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281742, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -261.75
+      value: -4.55
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281742, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.61
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281742, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 224.61
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281742, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7882,6 +7882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WinText: {fileID: 152885322}
+  WinObject: {fileID: 2074813662}
 --- !u!1 &1160816813
 GameObject:
   m_ObjectHideFlags: 0
@@ -18122,6 +18123,11 @@ GameObject:
 --- !u!4 &2074813659 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4dec07d500f62ef4fb49c9165eaf871f, type: 3}
+  m_PrefabInstance: {fileID: 863825256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &2074813662 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 4dec07d500f62ef4fb49c9165eaf871f, type: 3}
   m_PrefabInstance: {fileID: 863825256}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &2074813663
