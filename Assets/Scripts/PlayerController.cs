@@ -79,11 +79,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
 
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = true;
 
 
         }
+
+
+        //Sho mouse again
+        if (Input.GetMouseButtonDown(0))
+        {
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
+
+        }
+
         //fall reset
         if (transform.position.y < -18)
         {

@@ -2694,12 +2694,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
+      propertyPath: gravity
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: JumpText
       value: 
       objectReference: {fileID: 761178319}
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: dashSpeed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: moveSpeed
@@ -2719,7 +2723,7 @@ PrefabInstance:
       objectReference: {fileID: 1007427963837744789, guid: 5c0ab780015ea454eb6b452d722f80bc, type: 3}
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: sprintSpeed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: CameraSettings
@@ -18142,7 +18146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ef04880ec02734aad218378965bff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinAmount: 0.5
+  spinAmount: 0.3
 --- !u!1 &2075688381
 GameObject:
   m_ObjectHideFlags: 0
