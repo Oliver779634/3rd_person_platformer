@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -32,8 +33,10 @@ public class PlayerController : MonoBehaviour
     public bool doPrefabSpawn = false;
 
 
-
-
+    //Timer
+    public float timeSpentOnLevel = 0;
+    public TextMeshProUGUI timerText;
+    public float timeSpentOnLevelRound = 0;
 
 
     //Texts
@@ -41,6 +44,11 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI JumpText;
     public TextMeshProUGUI SprintText;
     public TextMeshProUGUI WinText;
+
+
+
+    //Respawn
+    public Vector3 respawnPos = new Vector3();
 
     void Start()
     {
@@ -50,7 +58,7 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-
+        respawnPos = new Vector3(-4.55f, 1.38f, -0.5f);
         if (doPrefabSpawn)
         {
             Instantiate(spawnPrefab, prefabPosition, prefabRotation);
@@ -99,11 +107,14 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -18)
         {
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            transform.position = respawnPos;
         }
-        
-        
-     
+
+        //Timer
+
+        timeSpentOnLevel += Time.deltaTime;
+        timeSpentOnLevelRound = Mathf.RoundToInt(timeSpentOnLevel);
+        timerText.text = timeSpentOnLevelRound.ToString();
 
     }
 
