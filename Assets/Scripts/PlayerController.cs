@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
         HandleJump();
         HandleMovement();
-        HandleCrouch();
+        
  
 
 
