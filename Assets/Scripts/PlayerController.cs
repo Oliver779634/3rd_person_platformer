@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI SprintText;
     public TextMeshProUGUI WinText;
     public TextMeshProUGUI finalTime;
-
+    public TextMeshProUGUI resetHelper;
 
     //Respawn
     public Vector3 respawnPos = new Vector3();
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
         {
 
             finalTime.text = ("Final Time:" + timeSpentOnLevelRound.ToString());
-            finalTime.fontSize= 18;
+            finalTime.fontSize= 68;
         }
         //Checkpoint switcher
 
@@ -153,6 +153,21 @@ public class PlayerController : MonoBehaviour
         {
 
             transform.position = warp.position;
+        }
+
+
+        //reset helper tutorial
+
+        if (timeSpentOnLevelRound < 3)
+        {
+
+            resetHelper.fontSize = 36;
+
+        }
+        else
+        {
+
+            resetHelper.fontSize = 0;
         }
     }
 
