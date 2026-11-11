@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     //Respawn
     public Vector3 respawnPos = new Vector3();
+    public Transform warp;
 
     void Start()
     {
@@ -71,16 +72,21 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
+
+        //Gravity
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+
+
+
         HandleJump();
         HandleMovement();
         HandleCrouch();
  
 
 
-        //Gravity
-
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        
 
 
         //Show mouse again
@@ -110,12 +116,28 @@ public class PlayerController : MonoBehaviour
             transform.position = respawnPos;
         }
 
+
+        //Manual reset
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
         //Timer
 
         timeSpentOnLevel += Time.deltaTime;
         timeSpentOnLevelRound = Mathf.RoundToInt(timeSpentOnLevel);
         timerText.text = timeSpentOnLevelRound.ToString();
 
+
+        //Checkpoint switcher
+
+        if (Input.GetKey(KeyCode.T))
+        {
+
+            transform.position = warp.position;
+        }
     }
 
     void HandleMovement() {
