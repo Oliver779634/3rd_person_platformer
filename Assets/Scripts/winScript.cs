@@ -12,7 +12,7 @@ public class winScript : MonoBehaviour
     public TextMeshProUGUI WinText;
     public MeshFilter WinObject;
     public bool hasGotten = false;
-
+    
 
     private void OnTriggerEnter(Collider other)
     {
