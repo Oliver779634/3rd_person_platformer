@@ -11,6 +11,7 @@ public class winScript : MonoBehaviour
 
     public TextMeshProUGUI WinText;
     public MeshFilter WinObject;
+    public bool hasGotten = false;
 
 
     private void OnTriggerEnter(Collider other)
@@ -18,9 +19,10 @@ public class winScript : MonoBehaviour
         if (other.CompareTag("Player")) {
 
 
-            Debug.Log("win");
+            
             WinText.fontSize = 72;
             Destroy(WinObject);
+            hasGotten = true;
             
         }
     }

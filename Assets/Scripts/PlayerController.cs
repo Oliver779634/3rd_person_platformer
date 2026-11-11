@@ -44,16 +44,21 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI JumpText;
     public TextMeshProUGUI SprintText;
     public TextMeshProUGUI WinText;
-
+    public TextMeshProUGUI finalTime;
 
 
     //Respawn
     public Vector3 respawnPos = new Vector3();
     public Transform warp;
 
+
+    //End
+
+    public winScript winScript;
+
     void Start()
     {
-
+        finalTime.fontSize = 0;
         WinText.fontSize = 0;
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -126,11 +131,22 @@ public class PlayerController : MonoBehaviour
         }
         //Timer
 
-        timeSpentOnLevel += Time.deltaTime;
-        timeSpentOnLevelRound = Mathf.RoundToInt(timeSpentOnLevel);
-        timerText.text = timeSpentOnLevelRound.ToString();
+        if (winScript.hasGotten == false)
+        {
 
 
+            timeSpentOnLevel += Time.deltaTime;
+            timeSpentOnLevelRound = Mathf.RoundToInt(timeSpentOnLevel);
+            timerText.text = timeSpentOnLevelRound.ToString();
+        }
+
+
+        if (winScript.hasGotten == true)
+        {
+
+            finalTime.text = ("Final Time:" + timeSpentOnLevelRound.ToString());
+            finalTime.fontSize= 18;
+        }
         //Checkpoint switcher
 
         if (Input.GetKey(KeyCode.T))
