@@ -147,13 +147,7 @@ public class PlayerController : MonoBehaviour
             finalTime.text = ("Final Time:" + timeSpentOnLevelRound.ToString());
             finalTime.fontSize= 68;
         }
-        //Checkpoint switcher
-
-        if (Input.GetKey(KeyCode.T))
-        {
-
-            transform.position = warp.position;
-        }
+        
 
 
         //reset helper tutorial
