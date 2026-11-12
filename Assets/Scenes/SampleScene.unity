@@ -4341,7 +4341,7 @@ PrefabInstance:
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: warp
       value: 
-      objectReference: {fileID: 757760312}
+      objectReference: {fileID: 0}
     - target: {fileID: 5238477548848281743, guid: 448570788f9b2ce43813282ebf59987f, type: 3}
       propertyPath: WinText
       value: 
@@ -4775,7 +4775,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &420525751 stripped
 Transform:
@@ -10877,37 +10877,6 @@ Transform:
   - {fileID: 1924880906}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &757760311
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 757760312}
-  m_Layer: 0
-  m_Name: Warp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &757760312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757760311}
-  m_LocalRotation: {x: -0.29200217, y: 0.17706577, z: -0.05560342, w: -0.9382381}
-  m_LocalPosition: {x: -127.37, y: 0.62, z: 415.86}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &760304357 stripped
 Transform:
@@ -40811,7 +40780,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4dec07d500f62ef4fb49c9165eaf871f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4dec07d500f62ef4fb49c9165eaf871f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43449,7 +43418,7 @@ Transform:
   m_Children:
   - {fileID: 1166786723}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1956710601 stripped
 Transform:
