@@ -43,7 +43,7 @@ public class winScript : MonoBehaviour
 
             }
 
-            else if (mdtrigger.number1Collected!= false)
+            else if (mdtrigger.number1Collected == false)
             {
 
                 medalNo1.gameObject.SetActive(true);
@@ -66,6 +66,6 @@ public class winScript : MonoBehaviour
     private void Update()
     {
         Debug.Log("coin1: " + mdtrigger.number1Collected);
-        Debug.Log("coin2: " + mdtrigger.number2Collected);
+        
     }
 }
