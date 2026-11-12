@@ -36,7 +36,7 @@ public class fallingPlatform : MonoBehaviour
             if (timer != 0)
             {
                 timer -= 1 * Time.deltaTime;
-                Debug.Log(timer);
+                
             }
 
             if (timer < 0)
